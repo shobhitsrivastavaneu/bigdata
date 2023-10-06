@@ -1,0 +1,13 @@
+{
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "ajv": "^8.10.0",
+    "etag": "^1.8.1",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.22",
+    "redis": "^4.0.3"
+  }
+}
