@@ -4,20 +4,18 @@ import { planSchema } from "../model/schema.js";
 
 const ajv = new Ajv();
 
-//Method to handle errors
+
 const errorHandler = (message, res, errCode = 400) => {
   res.status(errCode);
   res.json({ error: message });
 };
 
-//method to execute when exec is successfull
 const setSuccessResponse = (data, res, etag, successCode = 200) => {
   res.status(successCode);
   res.set({ Etag: etag });
   res.json(data);
 };
 
-//GET Controller
 export const getPlan = async (req, resp) => {
   try {
     const id = `${req.params.id}`;

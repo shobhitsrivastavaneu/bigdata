@@ -5,10 +5,8 @@ import dotenv from "dotenv"
 
 dotenv.config()
 
-// const CLIENT_ID = process.env.CLIENT_ID
 const REDIS_PORT = process.env.REDIS_PORT || 6379;
 
-// const googleClient = new OAuth2Client(CLIENT_ID);
 const client = createClient(REDIS_PORT)
 await client.connect();
 
